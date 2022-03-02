@@ -1,22 +1,28 @@
 Proceso cinco
-	definir nombreMascota Como Caracter;
-	definir edad Como Entero;
-	definir tipo Como Caracter;
-	definir nombre Como Caracter;
-	Escribir "¿cual es el nombre de su mascota?";
-	leer nombreMascota;
-	Escribir "¿cual es la edad de tu mascota en años?";
-	leer edad;
-	Escribir "¿que tipo de animal es?";
-	leer tipo;
-	escribir "¿cual es tu nombre completo?";
-	leer nombre;
-	Limpiar Pantalla;
-	Escribir "******************************************";
-	Escribir nombreMascota," es un(a) ",tipo, ",";
-	Escribir "el cual, tiene ",edad," años de edad";
-	escribir "y ", nombre," es actualmente su dueño(a).";
-	Escribir "******************************************";
-	
-
+	Definir control Como Logico;
+	Definir opcion Como Entero;
+	Definir nombre Como Caracter;
+	control <- Verdadero;
+	nombre <- "";
+	opcion <- 0;
+	Mientras control = Verdadero Hacer
+		Escribir "menu de usuario";
+		Escribir "1.capturar nombre";
+		Escribir "2.saludar persona";
+		Escribir "3.salir del sistema";
+		leer opcion;
+		si opcion  <> 1 y opcion <> 2 y opcion <> 3 Entonces
+			Escribir "porfavor escoja una opcion valida";
+		FinSi
+		Si opcion = 1 Entonces
+			leer nombre;
+		FinSi
+	    Si opcion =2 entonces
+			Escribir "Hola ",nombre; 
+		FinSi
+		si opcion = 3 Entonces
+			Escribir "Adios";
+			control <- Falso;
+		FinSi
+	FinMientras
 FinProceso
